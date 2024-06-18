@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://fav.farm/🏜️" />
+    <title>Arizona | Contact </title>
+</head>
+<body>
+    <script>
+        function confirmEmail() {
+            var email = document.getElementById('email').value;
+            var confirmEmail = document.getElementById('confirm').value;
+
+            if (email === confirmEmail) {
+                alert('Emails match.');
+                return true;
+            } else {
+                alert('Emails do not match.')
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('submit').addEventListener('click', function (event) {
+                if (!confirmEmail()) {
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+<nav>
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/phoenix.html">Phoenix</a></li>
+      <li><a href="/tucson.html">Tucson</a></li>
+      <li><a href="/scottsdale.html">Scottsdale</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+  </ul>
+  </nav>
+
+      <div class="form-container">
+        <form>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="your last name">
+
+            <label for="email">Email Address</label>
+            <input type="text" id="email" name="emailaddress" placeholder="john@doe.com">
+
+            <label for="confirm-email">Confirm Email</label>
+            <input type="text" id="confirm" name="confirmemail" placeholder="john@doe.com">
+
+            <label for="question">Question</label>
+            <textarea id="question" name="question" placeholder="ask something.." style="height: 200px;"></textarea>
+
+            <input type="submit" id="submit" value="Submit">
+        </form>
+      </div>
+</body>
+</html>
